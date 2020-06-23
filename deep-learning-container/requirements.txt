@@ -1,0 +1,13 @@
+Flask
+retrying
+flask-restplus
+Werkzeug==0.16.1
+Flask-SQLAlchemy
+Authlib==0.13
+langdetect
+pandas
+numpy
+tensorflow==1.15.2
+keras
+sklearn
+
