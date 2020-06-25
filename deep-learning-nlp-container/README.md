@@ -10,17 +10,17 @@ This uses flask to serve the models using a rest end point secured with Authlib 
 ## Take a quick look
 This is a ready to run example 
 
-Create the docker image
-    * create and tag the docker image using the Dockerfile defined in the project
-    * $ docker build --tag <REPOSITORY_NAME>:<TAG> .
+1. Create the docker image
+* create and tag the docker image using the Dockerfile defined in the project
+* $ docker build --tag <REPOSITORY_NAME>:<TAG> .
 
-Run the docker 
-   * $ docker run -e PYTHONUNBUFFERED=1 --publish <PORT-MAPPING>:<PORT-MAPPING>  --detach --name [container_name]<REPOSITORY_NAME>:<TAG>
+2. Run the docker 
+* $ docker run -e PYTHONUNBUFFERED=1 --publish <PORT-MAPPING>:<PORT-MAPPING>  --detach --name [container_name]<REPOSITORY_NAME>:<TAG>
 
-Predict
-    * The end point to predict with authentication is /auth/predict
-    * The end point to predict without authentication is /noauth/predict
-    This uses OAuth 2.0 
+3. Predict
+* The end point to predict with authentication is /auth/predict
+* The end point to predict without authentication is /noauth/predict
+> This uses OAuth 2.0 
 
 Following are the endpoint available
 
