@@ -9,7 +9,7 @@ This uses flask to serve the models using a rest end point secured with Authlib 
 
 ## Train and Save Deep Learning model
 
-Sample script of training the ML model is available in `../samples` folder. The training script contains example of creating `*h5*` file.
+Sample script of training the ML model is available in `nlp-model-containers/deep-learning-nlp-container/samples/` folder. The training script contains example of creating `*h5*` file.
 ##### Saved models
     1. tokenization pkl file
     2. Enocer pkl file
@@ -25,12 +25,18 @@ This is a ready to run example
 
 ##### 1)Create the docker image
     $ docker build --tag <REPOSITORY_NAME>:<TAG> .
-<b>Note</b>: create and tag the docker image using the Dockerfile defined in the project
-
+<b>Notes</b>:    
+    create and tag the docker image using the Dockerfile defined in the project. 
+    execute the above command in the location where you have `requirments.txt` and `dockerfile`
+    
 ##### 2)Run the docker
     $ docker run -e PYTHONUNBUFFERED=1 --publish <PORT-MAPPING>:<PORT-MAPPING> --detach --name [container_name]<REPOSITORY_NAME>:<TAG>
+
+##### 3)View the Docker Container and the logs
+    $ docker ps
+    $ docker logs -f [container_name]
    
-##### 3)Predict
+##### 4)Predict
     The end point to predict with authentication is `/auth/predict`
     The end point to predict without authentication is `/noauth/predict`
     
