@@ -42,7 +42,7 @@ Following are the endpoint available
 
 
 ##### Additional Information
-for Deep Learning Model, modelIdentifier would be name of the folder which contains artifacts(h5,pkl,yaml,etc..) in the models folder
-(Example if the keras with tensorflow as a backend model is saved as keras_small_talk_model.pkl  then the `modelIdentifier` would be `keras_small_talk_model`
+for Deep Learning Model, modelIdentifier would be name of the folder which contains artifacts(h5,pkl,yaml,etc..) in the models folder.
+(`nlp-model-containers/deep-learning-nlp-container/models/keras_small_talk_model/`)
 
-
+(Example if the keras with tensorflow as a backend model is saved as keras_small_talk_model.pkl  then the `modelIdentifier` would be `keras_small_talk_model`)
