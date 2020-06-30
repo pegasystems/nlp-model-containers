@@ -9,8 +9,7 @@ This uses flask to serve the models using a rest end point secured with Authlib 
 
 ## Train and Save Machine Learning model
 
-Sample script of training the ML model is available in `../samples` folder. The training script contains example of creating `*pkl*` file. 
-users can modify the script to support `*joblib*` and `*bst*`.
+Sample script of training the ML model is available in `nlp-model-containers/machine-learning-nlp-container/samples/` folder. The training script contains example of creating `*pkl*` file. users can modify the script to support `*joblib*` and `*bst*`.
 
 Users can train ML model using various algorithm supported by scikit/sklearn library
 
@@ -25,8 +24,12 @@ This is a ready to run example
 
 ##### 2)Run the docker
     $ docker run -e PYTHONUNBUFFERED=1 --publish <PORT-MAPPING>:<PORT-MAPPING> --detach --name [container_name]<REPOSITORY_NAME>:<TAG>
+
+##### 3)View the Docker Container and the logs
+    $ docker ps
+    $ docker logs -f [container_name]
    
-##### 3)Predict
+##### 4)Predict
     The end point to predict with authentication is `/auth/predict`
     The end point to predict without authentication is `/noauth/predict`
     
@@ -37,7 +40,7 @@ Following are the endpoint available
 /login : Use this endpoint to login any any username - currently any user is accepted as valid - once the user is created, use 'create client' option to create authentication credentials - ensure you select grant_types with "client_credentials" - Use the generated client secret and password to use auth endpoint
 
 ##### Additional Information
-for Machine Learning Model, the modelIdentifier would be the "pkl" file name
-(Example if the decision tree model is saved as smalltalk_model_randomforest.pkl. then the `modelIdentifier` would be `smalltalk_model_randomforest`
+for Machine Learning Model, the modelIdentifier would be the "pkl" file name in the location ``nlp-model-containers/machine-learning-nlp-container/models/`
+(Example if the Random Forest model is saved as smalltalk_model_randomforest.pkl. then the `modelIdentifier` would be `smalltalk_model_randomforest`
 
 
