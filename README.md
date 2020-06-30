@@ -16,7 +16,7 @@ Please find the steps to be followed:
 * Step4: Predict and access the endpoints
 	
 ## Machine Learning NLP container
-The project contains:
+<i>The project contains:</i>
 * README.md
 * Dockerfile
 * requirments.txt
@@ -24,7 +24,7 @@ The project contains:
 * sample training scripts(nlp-model-containers/machine-learning-nlp-container/samples/)
 * sample saved models(nlp-model-containers/machine-learning-nlp-container/models/)
 
-Algorithm Supported(Scikit/SKlearn):
+<i>Algorithm Supported(Scikit/SKlearn):</i>
 * Boosting Algos( XGBoost/LightBoost/AdaBoost/CatBoost)
 * Decision Tree
 * Random Forest
@@ -33,7 +33,7 @@ Algorithm Supported(Scikit/SKlearn):
 * KNN
 
 ## Deep Learning NLP container
-The project contains:
+<i>The project contains:</i>
 * README.md
 * Dockerfile
 * requirments.txt
@@ -41,7 +41,7 @@ The project contains:
 * sample training scripts(nlp-model-containers/deep-learning-nlp-container/samples/)
 * sample saved models(nlp-model-containers/deep-learning-nlp-container/models/)
 
-Algorithm Supported(Keras Framework):
+<i>Algorithm Supported(Keras Framework):</i>
 * Tensorflow
 * Microsoft Cognitive Toolkit (CNTK)
 * Theano
