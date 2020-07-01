@@ -48,10 +48,15 @@ Following are the endpoint available
 
 `/auth/predict`: Use this endpoint for prediction with authentication. details reagrding modelIdentifier is mentioned in Additional Information section
 
-Other endpoints available are `/oauth/authorize`  `/oauth/token` `/oauth/revoke` `/api/docs` `/create_client`
+`/api/docs` : The service discovery endpoint based on swagger open API standard. This can be used while creating the custom model service instance in pega.
+
+`/oauth/token` : OAuth 2 token generation endpoint used to create the tokens. This is used to get the refresehed tokens. 
+
+`/oauth/revoke` : OAuth 2 revoke endpoint.
+
+The endpoints `/oauth/token` and `/oauth/revoke` is used for authentication rule in pega along with the client id and client secret. They are required only during authenticated endpoint(`/auth/predict`)
 
 ##### Additional Information
-for Deep Learning Model, modelIdentifier would be name of the folder which contains artifacts(h5,pkl,yaml,etc..) in the models folder.
-(`nlp-model-containers/deep-learning-nlp-container/models/keras_small_talk_model/`)
+for Deep Learning Model, modelIdentifier would be name of the folder which contains artifacts(h5,pkl,yaml,etc..) in the models folder.(`nlp-model-containers/deep-learning-nlp-container/models/keras_small_talk_model/`)
 
-(Example if the keras with tensorflow as a backend model is saved as keras_small_talk_model.pkl  then the `modelIdentifier` would be `keras_small_talk_model`)
+(Example if the artifacts of keras with tensorflow is saved in folder `keras_small_talk_model`  then the `modelIdentifier` would be `keras_small_talk_model`)
