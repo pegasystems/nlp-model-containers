@@ -43,10 +43,14 @@ Following are the endpoint available
 
 `/auth/predict`: Use this endpoint for prediction with authentication. details reagrding modelIdentifier is mentioned in Additional Information section
 
-Other endpoints available are `/oauth/authorize`  `/oauth/token` `/oauth/revoke` `/api/docs` `/create_client`
+`/api/docs` : The service discovery endpoint based on swagger open API standard. This can be used while creating the custom model service instance in pega.
+
+`/oauth/token` : OAuth 2 token generation endpoint used to create the tokens. This is used to get the refresehed tokens. 
+
+`/oauth/revoke` : OAuth 2 revoke endpoint.
+
+The endpoints `/oauth/token` and `/oauth/revoke` is used for authentication rule in pega along with the client id and client secret and are required only during authenticated endpoint(`/auth/predict`)
 
 ##### Additional Information
 for Machine Learning Model, the modelIdentifier would be the "pkl" file name in the location ` nlp-model-containers/machine-learning-nlp-container/models/ `
 (Example if the Random Forest model is saved as smalltalk_model_randomforest.pkl. then the `modelIdentifier` would be `smalltalk_model_randomforest`
-
-
