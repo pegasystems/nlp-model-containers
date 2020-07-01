@@ -4,6 +4,11 @@
 * [Deep Learning NLP container](#deep-learning-nlp-container)
 
 ## General info
+This is an example dockerized container which comes with the dependencies required to run your machine learning and deep learning models
+
+This uses flask to serve the models using a rest end point secured with Authlib for OAuth2 (using https://docs.authlib.org/en/latest/flask/2/) as well as 
+an end point without auth.
+
 The Repo contains 2 containers.
 * Machine Learning Container
 * Deep Learning Container
@@ -12,8 +17,9 @@ Please find the steps to be followed:
 
 * Step1: Train The Model
 * Step2: Save the Train,Vectorizer model
-* Step3: Initialize the Flask API via Docker container
-* Step4: Predict and access the endpoints
+* Step3: Dump the saved model into specific location(nlp-model-containers/machine-learning-nlp-container/models/)
+* Step4: Initialize the Flask API via Docker container
+* Step5: Predict and access the endpoints
 	
 ## Machine Learning NLP container
 <i>The project contains:</i>
