@@ -49,7 +49,7 @@ Following are the endpoint available
 
 `/oauth/revoke` : OAuth 2 revoke endpoint.
 
-The endpoints `/oauth/token` and `/oauth/revoke` is used for authentication rule in pega along with the client id and client secret and are required only during authenticated endpoint(`/auth/predict`)
+The endpoints `/oauth/token` and `/oauth/revoke` is used for authentication rule in pega along with the client id and client secret. They are required only during authenticated endpoint(`/auth/predict`)
 
 ##### Additional Information
 for Machine Learning Model, the modelIdentifier would be the "pkl" file name in the location ` nlp-model-containers/machine-learning-nlp-container/models/ `
