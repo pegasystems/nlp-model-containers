@@ -40,12 +40,15 @@ This is a ready to run example
     The end point to predict with authentication is `/auth/predict`
     The end point to predict without authentication is `/noauth/predict`
     
-This uses `OAuth 2.0 `
-
 Following are the endpoint available
 
-/login : Use this endpoint to login any any username - currently any user is accepted as valid - once the user is created, use 'create client' option to create authentication credentials - ensure you select grant_types with "client_credentials" - Use the generated client secret and password to use auth endpoint
+`/login` : Use this endpoint to login any any username - currently any user is accepted as valid - once the user is created, use 'create client' option to create authentication credentials - ensure you select grant_types with <b>"client_credentials"</b> - Use the generated client secret and password to use auth endpoint
 
+`/noauth/predict`: Use this endpoint for prediction without authentication. details reagrding modelIdentifier is mentioned in Additional Information section
+
+`/auth/predict`: Use this endpoint for prediction with authentication. details reagrding modelIdentifier is mentioned in Additional Information section
+
+Other endpoints available are `/oauth/authorize`  `/oauth/token` `/oauth/revoke` `/api/docs` `/create_client`
 
 ##### Additional Information
 for Deep Learning Model, modelIdentifier would be name of the folder which contains artifacts(h5,pkl,yaml,etc..) in the models folder.
