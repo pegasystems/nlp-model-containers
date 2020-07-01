@@ -51,3 +51,5 @@ Please find the steps to be followed:
 * Tensorflow
 * Microsoft Cognitive Toolkit (CNTK)
 * Theano
+
+<b>Notes:</b> Please note that it is <b><u>not for</u></b> production use cases as this has an un authenticated endpoint and also it doesn't run on SSL
