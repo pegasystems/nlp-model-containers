@@ -9,13 +9,12 @@ This uses flask to serve the models using a rest end point secured with Authlib 
 
 ## Train and Save Machine Learning model
 
-Sample script of training the ML model is available in `nlp-model-containers/machine-learning-nlp-container/samples/` folder. The training script contains example of creating `*pkl*` file. users can modify the script to support `*joblib*` and `*bst*`.
+* Sample script of training the ML model is available in `nlp-model-containers/machine-learning-nlp-container/samples/` folder. 
+* The training script contains example of creating `*pkl*` file. users can modify the script to support `*joblib*` and `*bst*`.
+* Users can train ML model using various algorithm supported by scikit/sklearn library
+* The saved model should contain both vectorization process and the model details(example: provided in the training sample script)
 
-Users can train ML model using various algorithm supported by scikit/sklearn library
-
-The saved model should contain both vectorization process and the model details(example: provided in the training sample script)
-
-## Take a quick look
+## Build and Run Container
 This is a ready to run example 
 
 ##### 1)Create the docker image
@@ -29,19 +28,24 @@ This is a ready to run example
     $ docker ps
     $ docker logs -f [container_name]
    
-##### 4)Predict
-    The end point to predict with authentication is `/auth/predict`
-    The end point to predict without authentication is `/noauth/predict`
-    
-This uses `OAuth 2.0 `
+## Access model through Rest API
 
-Following are the endpoint available
+Model Endpoint API:
+`/auth/predict`
+`/noauth/predict`
+
+parameters:
+* modelIdentifier - Identifier of the model to use for evaluation
+* text - Text to be analysed.
+
+Additional Info:
+* This uses `OAuth 2.0 `
+* The modelIdentifier would be the "pkl" file name in the location ` nlp-model-containers/machine-learning-nlp-container/models/ `
+  (Example if the Random Forest model is saved as smalltalk_model_randomforest.pkl. then the `modelIdentifier` would be `smalltalk_model_randomforest`)
+
+## List of API:
 
 `/login` : Use this endpoint to login any any username - currently any user is accepted as valid - once the user is created, use 'create client' option to create authentication credentials - ensure you select grant_types with <b>"client_credentials"</b> - Use the generated client secret and password to use auth endpoint
-
-`/noauth/predict`: Use this endpoint for prediction without authentication. details reagrding modelIdentifier is mentioned in Additional Information section
-
-`/auth/predict`: Use this endpoint for prediction with authentication. details reagrding modelIdentifier is mentioned in Additional Information section
 
 `/api/docs` : The service discovery endpoint based on swagger open API standard. This can be used while creating the custom model service instance in pega.
 
@@ -50,7 +54,3 @@ Following are the endpoint available
 `/oauth/revoke` : OAuth 2 revoke endpoint.
 
 The endpoints `/oauth/token` and `/oauth/revoke` is used for authentication rule in pega along with the client id and client secret. They are required only during authenticated endpoint(`/auth/predict`)
-
-##### Additional Information
-for Machine Learning Model, the modelIdentifier would be the "pkl" file name in the location ` nlp-model-containers/machine-learning-nlp-container/models/ `
-(Example if the Random Forest model is saved as smalltalk_model_randomforest.pkl. then the `modelIdentifier` would be `smalltalk_model_randomforest`
