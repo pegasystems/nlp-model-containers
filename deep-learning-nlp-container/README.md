@@ -18,10 +18,10 @@ This uses flask to serve the models using a rest end point secured with Authlib 
     3. Model Hyper Parameter yaml file
     4. Model weights H5 file
 
-Tokenization pkl file:  The main purpose of this file is to vectorize the text corpus, by turning each text into vector where the coefficient for each token could be based on tf-idf.
-Encoder pkl file: The main purpose of this file is to convert the label encoded category to original category
-Model Hyper Parameter file: The main purpose of this file is to configure hidden layers, neurons, activation function required by the Neural Network.
-Model weights file: The main purpose of this file is to save the configurations specified in the model hyper parameter file and then to use them during inference.
+* `Tokenization pkl file:`  The main purpose of this file is to vectorize the text corpus, by turning each text into vector where the coefficient for each token could be based on tf-idf.
+* `Encoder pkl file:` The main purpose of this file is to convert the label encoded category to original category
+* `Model Hyper Parameter file:` The main purpose of this file is to configure hidden layers, neurons, activation function required by the Neural Network.
+* `Model weights file:` The main purpose of this file is to save the configurations specified in the model hyper parameter file and then to use them during inference.
 
 Users can refer the sample scripts and modify the scripts w.r.t requirments.
 
