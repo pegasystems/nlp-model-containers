@@ -9,7 +9,8 @@ This is an example dockerized container which comes with the dependencies requir
 This uses flask to serve the models using a rest end point secured with Authlib for OAuth2 (using https://docs.authlib.org/en/latest/flask/2/) as well as 
 an end point without auth.
 
-<b>Notes:</b> Please note that it is <b><u>not for</u></b> production use cases as this has an un authenticated endpoint and also it doesn't run on SSL
+
+<b>Notes:</b> Please note that it is a <b><u>sample</u></b> Docker Container. scripts can be modified and deployed with/without authentication.
 
 The Repo contains 2 containers.
 * Machine Learning Container
@@ -17,11 +18,19 @@ The Repo contains 2 containers.
 
 Please find the steps to be followed:
 
-* Step1: Train The Model
-* Step2: Save the Train,Vectorizer model
-* Step3: Dump the saved model into specific location(nlp-model-containers/machine-learning-nlp-container/models/)
+* Step1: Train the model
+* Step2: Save the model
+* Step3: Dump the saved model into specific location(details mentioned 
 * Step4: Initialize the Flask API via Docker container
 * Step5: Predict and access the endpoints
+
+Note: Detailed steps are available in the Machine Learning and Deep Learning respective README.md files
+
+Machine Learning:
+https://github.com/pegasystems/nlp-model-containers/tree/master/deep-learning-nlp-container
+
+Deep Learning:
+https://github.com/pegasystems/nlp-model-containers/tree/master/machine-learning-nlp-container
 
 
 ## Machine Learning NLP container
@@ -30,8 +39,8 @@ Please find the steps to be followed:
 * Dockerfile
 * requirments.txt
 * app.py
-* sample training scripts(nlp-model-containers/machine-learning-nlp-container/samples/)
-* sample saved models(nlp-model-containers/machine-learning-nlp-container/models/)
+* sample training scripts(https://github.com/pegasystems/nlp-model-containers/tree/master/machine-learning-nlp-container/samples)
+* sample saved models(https://github.com/pegasystems/nlp-model-containers/tree/master/machine-learning-nlp-container/models)
 
 <i>Algorithm Supported(Scikit/SKlearn):</i>
 * Boosting Algos( XGBoost/LightBoost/AdaBoost/CatBoost)
@@ -47,8 +56,8 @@ Please find the steps to be followed:
 * Dockerfile
 * requirments.txt
 * app.py
-* sample training scripts(nlp-model-containers/deep-learning-nlp-container/samples/)
-* sample saved models(nlp-model-containers/deep-learning-nlp-container/models/)
+* sample training scripts(https://github.com/pegasystems/nlp-model-containers/tree/master/deep-learning-nlp-container/samples)
+* sample saved models(https://github.com/pegasystems/nlp-model-containers/tree/master/deep-learning-nlp-container/models/keras_small_talk_model)
 
 <i>Algorithm Supported(Keras Framework):</i>
 * Tensorflow
