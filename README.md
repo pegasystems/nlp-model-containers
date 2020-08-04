@@ -24,7 +24,7 @@ Please find the steps to be followed:
 * Step4: Initialize the Flask API via Docker container
 * Step5: Predict and access the endpoints
 
-Note: Detailed steps are available in the Machine Learning and Deep Learning respective README.md files
+<b>Note:</b> Detailed steps are available in the Machine Learning and Deep Learning respective README.md files
 
 Machine Learning:
 https://github.com/pegasystems/nlp-model-containers/tree/master/deep-learning-nlp-container
