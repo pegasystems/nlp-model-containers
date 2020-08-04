@@ -30,16 +30,16 @@ This is a ready to run example
    
 ## Access model through REST API
 
-* Model Endpoint API:
-`/auth/predict` - Use this endpoint for prediction with authentication. parameters are specified below
+* Model Endpoint API:<br>
+`/auth/predict` - Use this endpoint for prediction with authentication. parameters are specified below<br>
 `/noauth/predict` - Use this endpoint for prediction without authentication. parameters are specified below
 
-parameters:
-* modelIdentifier - Identifier of the model to use for evaluation
-* text - Text to be analysed.
+* parameters:<br>
+  `modelIdentifier` - Identifier of the model to use for evaluation<br>
+  `text` - Text to be analysed.
 
-Additional Info:
-* The modelIdentifier would be the "pkl" file name in the location ` nlp-model-containers/machine-learning-nlp-container/models/ `
+* Additional Info:<br>
+  The modelIdentifier would be the "pkl" file name in the location ` nlp-model-containers/machine-learning-nlp-container/models/ `
   (Example if the Random Forest model is saved as smalltalk_model_randomforest.pkl. then the `modelIdentifier` would be `smalltalk_model_randomforest`)
 
 ## List of API:
