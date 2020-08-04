@@ -27,10 +27,11 @@ Please find the steps to be followed:
 <b>Note:</b> Detailed steps are available in the Machine Learning and Deep Learning respective README.md files
 
 Machine Learning:
-https://github.com/pegasystems/nlp-model-containers/tree/master/deep-learning-nlp-container
+https://github.com/pegasystems/nlp-model-containers/tree/master/machine-learning-nlp-container
 
 Deep Learning:
-https://github.com/pegasystems/nlp-model-containers/tree/master/machine-learning-nlp-container
+https://github.com/pegasystems/nlp-model-containers/tree/master/deep-learning-nlp-container
+
 
 
 ## Machine Learning NLP container
