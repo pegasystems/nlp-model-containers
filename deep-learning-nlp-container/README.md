@@ -9,18 +9,20 @@ This uses flask to serve the models using a rest end point secured with Authlib 
 
 ## Train and Save Deep Learning model
 
-Sample script of training the ML model is available in `nlp-model-containers/deep-learning-nlp-container/samples/` folder. The training script contains example of creating `*h5*` file.
+* Sample script of training the ML model is available in `nlp-model-containers/deep-learning-nlp-container/samples/` folder. 
+* The training script contains example of creating `*h5*` file.
+
 ##### Saved models
-    1. tokenization pkl file
-    2. Enocer pkl file
+    1. tokenization pkl file 
+    2. Encoder pkl file
     3. Model Hyper Parameter yaml file
-    4. Model Wweights H5 file
+    4. Model weights H5 file
 
 Users can refer the sample scripts and modify the scripts w.r.t requirments.
 
 Users can train DL model using Keras Framework(can be customized to use tensorflow/CNTK/theano as a backend)
 
-## Take a quick look
+## Build and Run Container
 This is a ready to run example 
 
 ##### 1)Create the docker image
@@ -36,11 +38,23 @@ This is a ready to run example
     $ docker ps
     $ docker logs -f [container_name]
    
-##### 4)Predict
-    The end point to predict with authentication is `/auth/predict`
-    The end point to predict without authentication is `/noauth/predict`
+## Access model through REST API
+Model Endpoint API:
+`/auth/predict`
+`/noauth/predict`
+
+parameters:
+* modelIdentifier - Identifier of the model to use for evaluation
+* text - Text to be analysed.
+
+Additional Info:
+* This uses `OAuth 2.0 `
+* modelIdentifier would be name of the folder which contains artifacts(h5,pkl,yaml,etc..) in the models folder.(`nlp-model-containers/deep-learning-nlp-container/models/keras_small_talk_model/`)
+
+(Example if the artifacts of keras with tensorflow is saved in folder `keras_small_talk_model`  then the `modelIdentifier` would be `keras_small_talk_model`)
+
     
-Following are the endpoint available
+## List of API:
 
 `/login` : Use this endpoint to login any any username - currently any user is accepted as valid - once the user is created, use 'create client' option to create authentication credentials - ensure you select grant_types with <b>"client_credentials"</b> - Use the generated client secret and password to use auth endpoint
 
@@ -56,7 +70,3 @@ Following are the endpoint available
 
 The endpoints `/oauth/token` and `/oauth/revoke` is used for authentication rule in pega along with the client id and client secret. They are required only during authenticated endpoint(`/auth/predict`)
 
-##### Additional Information
-for Deep Learning Model, modelIdentifier would be name of the folder which contains artifacts(h5,pkl,yaml,etc..) in the models folder.(`nlp-model-containers/deep-learning-nlp-container/models/keras_small_talk_model/`)
-
-(Example if the artifacts of keras with tensorflow is saved in folder `keras_small_talk_model`  then the `modelIdentifier` would be `keras_small_talk_model`)
