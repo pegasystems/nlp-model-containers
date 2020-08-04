@@ -20,7 +20,7 @@ Please find the steps to be followed:
 
 * Step1: Train the model
 * Step2: Save the model
-* Step3: Dump the saved model into specific location(details mentioned 
+* Step3: Dump the saved model into specific location
 * Step4: Initialize the Flask API via Docker container
 * Step5: Predict and access the endpoints
 
