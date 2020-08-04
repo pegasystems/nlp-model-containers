@@ -7,7 +7,7 @@ This uses flask to serve the models using a rest end point secured with Authlib 
 ## Prerequisites
     1. Docker installed
 
-## Train and Save Machine Learning model
+## Train Machine Learning model
 
 * Sample script of training the ML model is available in `nlp-model-containers/machine-learning-nlp-container/samples/` folder. 
 * The training script contains example of creating `*pkl*` file. users can modify the script to support `*joblib*` and `*bst*`.
@@ -28,7 +28,7 @@ This is a ready to run example
     $ docker ps
     $ docker logs -f [container_name]
    
-## Access model through Rest API
+## Access model through REST API
 
 Model Endpoint API:
 `/auth/predict`
