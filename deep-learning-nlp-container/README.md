@@ -54,11 +54,10 @@ Please find the information below
 `/auth/predict` - Use this endpoint for prediction with authentication. parameters are specified below<br>
 `/noauth/predict` - Use this endpoint for prediction without authentication. parameters are specified below
 
-* parameters:<br>
+* Parameters for model endpoint API:<br>
   `modelIdentifier` - Identifier of the model to use for evaluation<br>
   `text` - Text to be analysed.<br>
-  <b>Note:</b> The above parameters are for model endpoint API
-
+  
 * Additional Info:<br>
   modelIdentifier would be name of the folder which contains artifacts(h5,pkl,yaml,etc..) in the models folder.(`nlp-model-containers/deep-learning-nlp-container/models/keras_small_talk_model/`)<br><br>
  (Example if the artifacts of keras with tensorflow is saved in folder `keras_small_talk_model`  then the `modelIdentifier` would be `keras_small_talk_model`)
