@@ -30,6 +30,9 @@ This is a ready to run example
    
 ## Access model through REST API
 
+* Service discovery endpoint (Open API) :
+`/api/docs` : The service discovery endpoint based on swagger open API standard. This can be used while creating the custom model service instance in pega.
+
 * Model Endpoint API:<br>
 `/auth/predict` - Use this endpoint for prediction with authentication. parameters are specified below<br>
 `/noauth/predict` - Use this endpoint for prediction without authentication. parameters are specified below
@@ -42,7 +45,7 @@ This is a ready to run example
   The modelIdentifier would be the "pkl" file name in the location ` nlp-model-containers/machine-learning-nlp-container/models/ `
   (Example if the Random Forest model is saved as smalltalk_model_randomforest.pkl. then the `modelIdentifier` would be `smalltalk_model_randomforest`)
 
-## List of API:
+## List of Other API:
 
 `/login` : Use this endpoint to login any any username - currently any user is accepted as valid - once the user is created, use 'create client' option to create authentication credentials - ensure you select grant_types with <b>"client_credentials"</b> - Use the generated client secret and password to use auth endpoint
 
