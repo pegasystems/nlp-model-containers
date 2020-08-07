@@ -44,6 +44,8 @@ This is a ready to run example
     $ docker logs -f [container_name]
    
 ## Access model through REST API
+You can either configure the service discovery endpoint or a stand alone API in Pega Machine learning services. <br>
+Please find the information below
 
 * Service discovery endpoint (Open API) :<br>
 `/api/docs` : The service discovery endpoint based on swagger open API standard. This can be used while creating the custom model service instance in pega.
@@ -54,7 +56,8 @@ This is a ready to run example
 
 * parameters:<br>
   `modelIdentifier` - Identifier of the model to use for evaluation<br>
-  `text` - Text to be analysed.
+  `text` - Text to be analysed.<br>
+  <b>Note:</b> The above parameters are for model endpoint API
 
 * Additional Info:<br>
   modelIdentifier would be name of the folder which contains artifacts(h5,pkl,yaml,etc..) in the models folder.(`nlp-model-containers/deep-learning-nlp-container/models/keras_small_talk_model/`)<br><br>
