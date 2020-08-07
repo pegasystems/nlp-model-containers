@@ -30,7 +30,7 @@ This is a ready to run example
    
 ## Access model through REST API
 
-* Service discovery endpoint (Open API) :
+* Service discovery endpoint (Open API) :<br>
 `/api/docs` : The service discovery endpoint based on swagger open API standard. This can be used while creating the custom model service instance in pega.
 
 * Model Endpoint API:<br>
@@ -52,8 +52,6 @@ This is a ready to run example
 `/noauth/predict` : Use this endpoint for prediction without authentication.
 
 `/auth/predict` : Use this endpoint for prediction with authentication.
-
-`/api/docs` : The service discovery endpoint based on swagger open API standard. This can be used while creating the custom model service instance in pega.
 
 `/oauth/token` : OAuth 2 token generation endpoint used to create the tokens. This is used to get the refresehed tokens. 
 
