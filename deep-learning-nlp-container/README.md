@@ -44,30 +44,30 @@ This is a ready to run example
     $ docker logs -f [container_name]
    
 ## Access model through REST API
-Model Endpoint API:
-`/auth/predict`
-`/noauth/predict`
 
-parameters:
-* modelIdentifier - Identifier of the model to use for evaluation
-* text - Text to be analysed.
+* Service discovery endpoint (Open API) :<br>
+`/api/docs` : The service discovery endpoint based on swagger open API standard. This can be used while creating the custom model service instance in pega.
 
-Additional Info:
-* This uses `OAuth 2.0 `
-* modelIdentifier would be name of the folder which contains artifacts(h5,pkl,yaml,etc..) in the models folder.(`nlp-model-containers/deep-learning-nlp-container/models/keras_small_talk_model/`)
+* Model Endpoint API:<br>
+`/auth/predict` - Use this endpoint for prediction with authentication. parameters are specified below<br>
+`/noauth/predict` - Use this endpoint for prediction without authentication. parameters are specified below
 
-(Example if the artifacts of keras with tensorflow is saved in folder `keras_small_talk_model`  then the `modelIdentifier` would be `keras_small_talk_model`)
+* parameters:<br>
+  `modelIdentifier` - Identifier of the model to use for evaluation<br>
+  `text` - Text to be analysed.
+
+* Additional Info:<br>
+  modelIdentifier would be name of the folder which contains artifacts(h5,pkl,yaml,etc..) in the models folder.(`nlp-model-containers/deep-learning-nlp-container/models/keras_small_talk_model/`)<br><br>
+ (Example if the artifacts of keras with tensorflow is saved in folder `keras_small_talk_model`  then the `modelIdentifier` would be `keras_small_talk_model`)
 
     
-## List of API:
+## List of other API:
 
 `/login` : Use this endpoint to login any any username - currently any user is accepted as valid - once the user is created, use 'create client' option to create authentication credentials - ensure you select grant_types with <b>"client_credentials"</b> - Use the generated client secret and password to use auth endpoint
 
 `/noauth/predict`: Use this endpoint for prediction without authentication. details reagrding modelIdentifier is mentioned in Additional Information section
 
 `/auth/predict`: Use this endpoint for prediction with authentication. details reagrding modelIdentifier is mentioned in Additional Information section
-
-`/api/docs` : The service discovery endpoint based on swagger open API standard. This can be used while creating the custom model service instance in pega.
 
 `/oauth/token` : OAuth 2 token generation endpoint used to create the tokens. This is used to get the refresehed tokens. 
 
