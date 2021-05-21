@@ -7,7 +7,7 @@ Authlib==0.13
 langdetect
 pandas
 numpy
-tensorflow==1.15.2
+tensorflow==2.5.0
 keras
 sklearn
 
